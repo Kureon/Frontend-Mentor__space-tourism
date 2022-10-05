@@ -323,14 +323,14 @@ select {
         }
 
         &[data-visible="true"] {
-            transform: translateX(0);
+            transform: translateX(0%);
         }
     }
 
     .mobile-nav-toggle {
         display: block;
         position: absolute;
-        z-index: 2000;
+        z-index: 9999;
         top: 2rem;
         right: 1rem;
         background-color: transparent;
