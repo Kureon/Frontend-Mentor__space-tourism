@@ -5,9 +5,9 @@ navToggle.addEventListener('click', () => {
     
     const visibility = primaryNav.getAttribute("data-visible");
     if (visibility === "false") {
-        nav.setAttribute("data-visible", true);
+        visibility.setAttribute("data-visible", true);
     } else if (visibility == "true") {
-        nav.setAttribute("data-visible", false);
+        visibility.setAttribute("data-visible", false);
     }
 
     console.log(visibility);
