@@ -10,5 +10,5 @@ navToggle.addEventListener('click', () => {
         primaryNav.setAttribute("data-visible", false);
     }
 
-    console.log(visibility); 
+    console.log(visibility);
 });
