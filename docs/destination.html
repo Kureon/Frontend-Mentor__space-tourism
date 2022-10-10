@@ -13,11 +13,11 @@
       
   <!-- Our custom CSS -->
   <link rel="stylesheet" href="./css/style.css">
-  <title>Frontend Mentor | Space tourism</title>
+  <title>Frontend Mentor | Space tourism - Destination</title>
   <script src="./index.js" defer></script>
 </head>
 
-<body class="home">
+<body class="destination">
   <a href="#main" class="skip-to-content">Skip to content</a>
   
   <header class="primary-header flex">
@@ -35,17 +35,38 @@
     </nav>
   </header>
 
-  <main id="main" class="grid-container grid-container--home">
+  <main id="main" class="grid-container grid-container--destination">
     <div>
-      <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to
-      <span class="d-block fs-900 ff-serif text-white">Space</span></h1>
-      
-      <p>Let’s face it; if you want to go to space, you might as well genuinely go to 
-      outer space and not hover kind of on the edge of it. Well sit back, and relax 
-      because we’ll give you a truly out of this world experience! </p>
+        <h1 class="numbered-title"><span>01</span> Pick your destination</h1>
+        <img src="./assets/destination/image-moon.webp" alt="the moon">
     </div>
+
     <div>
-      <a href="#" class="large-button uppercase ff-serif text-dark bg-white">Explore</a>
+        <div class="tab-list flex underline-indicators">
+            <button aria-selected="true" class="bg-dark uppercase ff-sans-cond text-accent letter-spacing-2">Moon</button>
+            <button aria-selected="false" class="bg-dark uppercase ff-sans-cond text-accent letter-spacing-2">Mars</button>
+            <button aria-selected="false" class="bg-dark uppercase ff-sans-cond text-accent letter-spacing-2">Europa</button>
+            <button aria-selected="false" class="bg-dark uppercase ff-sans-cond text-accent letter-spacing-2">Titan</button>
+        </div>
+    
+        <article>
+            <h2 class="fs-800 ff-serif text-white uppercase">Moon</h2>
+            <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+            regain perspective and come back refreshed. While you’re there, take in some history 
+            by visiting the Luna 2 and Apollo 11 landing sites.</p>
+
+            <div class="flex">
+                <div>
+                    <h3 class="text-accent fs-200 ff-sans-cond uppercase">Avg. distance</h3>
+                    <p class="text-white fs-500 ff-serif uppercase">384,400 km</p>
+                </div>
+
+                <div>
+                    <h3 class="text-accent fs-200 ff-sans-cond uppercase">Est. travel time</h3>
+                    <span class="text-white fs-500 ff-serif uppercase">3 days</span>
+                </div>
+            </div>
+        </article>
     </div>
   </main>
 
