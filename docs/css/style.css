@@ -650,7 +650,7 @@ body {
     max-width: 90%;
   }
   .grid-container--technology {
-    grid-template-columns: minmax(1rem, 1fr) minmax(0, 5rem) minmax(0, 30rem) minmax(0, 25rem) minmax(1rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 5rem) minmax(0, 30rem) minmax(0, 20rem) minmax(1rem, 1fr);
     justify-items: start;
     align-items: start;
     place-items: unset;
