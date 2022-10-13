@@ -465,6 +465,9 @@ body {
 .crew {
     background-image: url(../assets/crew/background-crew-mobile.jpg);
 }
+.technology {
+    background-image: url(../assets/technology/background-technology-mobile.jpg);
+}
 // Tablet
 @media (min-width: 35em) {
     .home {
@@ -475,6 +478,9 @@ body {
     }
     .crew {
         background-image: url(../assets/crew/background-crew-tablet.jpg);
+    }
+    .technology {
+        background-image: url(../assets/technology/background-technology-tablet.jpg);
     }
 }
 // Desktop
@@ -487,6 +493,9 @@ body {
     }
     .crew {
         background-image: url(../assets/crew/background-crew-desktop.jpg);
+    }
+    .technology {
+        background-image: url(../assets/technology/background-technology-desktop.jpg);
     }
 }
 
@@ -523,6 +532,7 @@ body {
        & > picture {
             grid-area: image;
             max-width: 60%;
+            align-self: start;
         }
 
         & > .tab-list {
@@ -571,6 +581,34 @@ body {
 
         & > .crew-info h2 {
             opacity: .5;
+        }
+}
+
+/* Technology layout */
+
+.grid-container--technology {
+    --flow-space: 2rem;
+    grid-template-areas:
+        'title'
+        'image'
+        'tabs'
+        'content';
+
+        & > picture {
+            grid-area: image;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            max-width: 1000%;
+            width: auto;
+        }
+
+        & > .numbered-indicators {
+            grid-area: tabs;
+            flex-direction: row;
+        }
+
+        & > .technology-info {
+            grid-area: content;
         }
 }
 
@@ -636,16 +674,41 @@ body {
     }
 
     .grid-container--crew {
+        grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
         justify-items: start;
-        align-items: start;
+        // align-items: start;
         grid-template-areas: 
             '. title title .'
             '. content image .'
             '. tabs image .';
 
             & > picture {
-                // align-self: end;
+                grid-column: span 2;
+                align-self: end;
                 max-width: 90%;
+            }
+    }
+
+    .grid-container--technology {
+        grid-template-columns: minmax(1rem, 1fr) minmax(0, 5rem) minmax(0, 30rem) minmax(0, 20rem) minmax(1rem, 1fr);
+        justify-items: start;
+        align-items: start;
+        place-items: unset;
+        grid-template-areas: 
+            '. title title title .'
+            '. tabs content image .';
+
+            & > .numbered-indicators {
+                flex-direction: column;
+                --gap: 2rem;
+            }
+
+            & > picture {
+                grid-column: span 2;
+                justify-self: right;
+                max-width: 100%;
+                margin: 0;
+                margin-right: -1rem;
             }
     }
 }
